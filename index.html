@@ -1,11 +1,9 @@
-<!-- Learn 'HTML' here: https://www.khanacademy.org/computing/computer-programming/html-css -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[title]</title>
+  <title>Generador de Conversaciones Humanas</title>
   <style>
     html { color-scheme: light dark; }
     body {
@@ -16,14 +14,15 @@
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      background-color: #f5f5f5;
     }
     h1 {
       text-align: center;
       color: #333;
       margin-bottom: 1em;
     }
-    .output-container {
-      background-color: #f9f9f9;
+    #output {
+      background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 1.5em;
@@ -51,8 +50,9 @@
       outline-offset: 2px;
     }
     @media (prefers-color-scheme: dark) {
+      body { background-color: #222; }
       h1 { color: #ddd; }
-      .output-container {
+      #output {
         background-color: #333;
         border-color: #555;
       }
@@ -60,8 +60,9 @@
   </style>
 </head>
 <body>
-  <h1>[title]</h1>
-  <div class="output-container" role="region" aria-live="polite">[output]</div>
-  <button onclick="try { update(); } catch(e) { alert('Error al generar contenido. Por favor, revisa el código del generador.'); }">Generar Nuevas Frases</button>
+  <h1>Generador de Conversaciones Humanas</h1>
+  <div id="output" role="region" aria-live="polite"></div>
+  <button onclick="generatePhrases()">Generar Nuevas Frases</button>
+  <script src="generadorFrases.js"></script>
 </body>
 </html>
