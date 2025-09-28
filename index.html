@@ -1,0 +1,67 @@
+<!-- Learn 'HTML' here: https://www.khanacademy.org/computing/computer-programming/html-css -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[title]</title>
+  <style>
+    html { color-scheme: light dark; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1em;
+    }
+    .output-container {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      min-height: 200px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:focus {
+      outline: 2px solid #0056b3;
+      outline-offset: 2px;
+    }
+    @media (prefers-color-scheme: dark) {
+      h1 { color: #ddd; }
+      .output-container {
+        background-color: #333;
+        border-color: #555;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>[title]</h1>
+  <div class="output-container" role="region" aria-live="polite">[output]</div>
+  <button onclick="try { update(); } catch(e) { alert('Error al generar contenido. Por favor, revisa el código del generador.'); }">Generar Nuevas Frases</button>
+</body>
+</html>
